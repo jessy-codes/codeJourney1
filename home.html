@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Assets/owl.carousel.min.css">
+    
+    <link rel="stylesheet" href="Assets/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="Assets/bootstrap.css">
+
+    <script src="Assets/JQuerry.js"></script>
+    <script src="Assets/bootstrap-offline-js/bootstrap.js"></script>
+    <script src="Assets/owl.carousel.min.js"></script>
+
+    <title>Landing Page</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    }
+     .Socials li{
+      list-style: none;
+      float: left;
+      }
+      .Socials i{
+        color: #000;
+        font-size: 25px;
+        display: inline-block; 
+        border-radius: 100%;
+      
+      }
+      .Socials i:hover{
+        background-color: #000;
+        color: #fff;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+       
+      }
+      .ham{
+          width: 30px;
+          height: 4px;
+          background-color: #343a40;;
+          margin: 5px 0;
+          border-radius: 10px;
+          transition: .5s;
+
+      }
+      .ham2{
+          width: 23px !important;
+      }
+      .ham3{
+        width: 23px;
+        margin-left: 7px;
+      }
+      .hamContainer{
+          display: inline-block;
+          cursor: pointer;
+      }
+      
+      .change .ham1{
+          transform: translate(0,5px) rotate(-45deg);
+      }
+      .change .ham2{
+          opacity: 0;
+      }
+      .change .ham3{
+          transform:translate(0,-5px) rotate(45deg);
+          width: 25px;
+          margin-left: 0px;
+      }
+      #nbtn{
+        border:  #ebebeb .2px solid;
+        outline: none;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .dark{
+        background-color:rgba(0, 0, 0, 0.75);
+        font-style: #ebebeb;
+      }
+      .btnD .btn-dark:hover{
+        box-shadow: 5px -8px 2px 0px rgba(169, 167, 167, 0.75);
+        -webkit-box-shadow: 5px -8px 2px 0px rgba(169, 167, 167, 0.75);
+        -moz-box-shadow: 5px -8px 2px 0px rgba(169, 167, 167, 0.75);
+      }
+      .btnD .btn-light:hover{
+        background-color: #fff;
+      }
+    
+.navbar{
+  background-color: rgba(256, 256, 256, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  min-width: 100%;
+  z-index: 10;
+}
+.overlay{
+  position: absolute;
+ min-height:116%;
+ min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.overlayinner{
+  margin-top: 12rem;
+  color: #ebebeb;
+}
+section ul li{
+       
+       float: left;
+       padding: 10px 10px;
+       
+     }
+     .mainLinks .disabled{
+       text-decoration: none;
+       color:  #343a40;
+     }
+     .mainLinks .active{
+      text-decoration: none;
+      color: #28a745;
+     }
+     .mainLinks a:hover{
+       color: #000;
+     }
+    
+     .mainLinks a:visited{
+       color: #000;
+     }
+     
+     .line{
+       border-top: 3px solid #6c757d;
+       width: 90%;
+       margin: auto;
+     }
+     .icons i{
+       display: inline-block;
+       width: 40px;
+       height: 40px;
+       border-radius: 100%;
+       border: #000 solid 2px;
+       color: #000;
+       font-size: 25px;
+     }
+     .icons i:hover{
+       background-color: #000;
+       color: #fff;
+     }
+   
+     footer input{
+       border: 1.5px solid #28a745 !important;
+     }
+     footer input:focus{
+       border: 2px solid #28a745 !important;
+       box-shadow: 0 2.5px 5px #28a745 !important;
+     }
+     footer{
+       box-shadow: 0px -15px 30 px -3px rgba(126, 118, 118, 0.68);
+       -webkit-box-shadow: 0px -15px 30px -3px rgba(0,0,0,0.33);
+       -moz-box-shadow: 0px -15px 30px -3px rgba(0,0,0,0.33);  
+       z-index: 100;
+     }
+@media (max-width: 700px){
+  video{
+    min-height: 100%;
+  }
+}
+    
+    </style>
+</head>
+<body>
+  <nav class= " navbar navbar-expand-md navbar-light text-muted ">
+    <a class="navbar-brand ml-2" href="#"><h1 class="text-dark font-weight-bold">Donor<span class="text-secondary">U</span></h1></a>
+<!-- Harmburger Menu -->
+<button id="nbtn" class=" navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#myNavToggler" aria-controls="myNavToggler" aria-expanded="false" aria-label="Toggle navigation">
+<div class="hamContainer" onclick="changeMenu(this)">
+  <div class="ham ham1"></div>
+  <div class="ham ham2"></div>
+  <div class="ham ham3"></div>
+</div>
+</button>
+<div class="collapse navbar-collapse" id="myNavToggler">
+<ul class="navbar-nav m-auto Socials">
+<li class="nav-item text-center ">
+  <a class="nav-link " href="#">
+      <i class="bi bi-twitter"></i>
+  </a>
+</li>
+<li class="nav-item text-center">
+  <a class="nav-link " href="#">
+    <i class="bi bi-facebook"></i>
+  </a>
+</li>
+<li class="nav-item text-center">
+  <a class="nav-link " href="#">
+    <i class="bi bi-instagram" ></i>
+  </a>
+</li>
+<li class="nav-item text-center">
+  <a class="nav-link" href="#">
+    <i class="bi bi-youtube"></i>
+  </a>
+</li>
+</ul>
+<div class="text-center btnD">
+  <a href="login.html">
+    <button type="button" class="btn btn-light m-2">Log In</button>
+  </a>
+  <a href="SignUp.html">
+    <button type="button" class="btn btn-dark mr-2">Register</button>
+  </a>
+
+</div>
+</div>
+
+<!-- XXXXXXXXXXXXXXXX End of Harmburger MenuXXXXXXXXXXXXXXXXXX -->
+    
+  <!-- </div> -->
+</nav>
+
+   
+      <div class="overlay">
+       <div class="overlayinner text-center align-items-center">
+        <h1 class="">Get Started with DonorU</h1>
+        <p class="text-center ">it all starts with you; <span class="text-secondary">Changing the world one smile at a time </span></p>
+        <ul>
+          <li>
+            <a href="Assets/DonorU User Manual.docx" download="DonorU Manual"> User Manual</a>
+          </li>
+        </ul>
+       </div>
+      </div>
+     
+      <video autoplay muted loop id="myVideo" class="embed-responsive embed-responsive-21by9 h-100">
+        <source src="img/bg.mp4" type="video/mp4" class="">
+      </video>
+      <!-- embed-responsive-item -->
+      <footer class="text-center text-muted bg-light" id="myfoot">
+        <section class="d-flex justify-content-center">
+          <ul class="mainLinks ">
+            <li><a href="index.html#home" role="button" class="disabled">Home</a></li>
+            <li><a href="index.html#about" role="button" class="disabled">About</a></li>
+            <li><a href="index.html#sec2" role="button" class="disabled">Causes</a></li>
+            <li><a href="#" role="button" class="disabled">Contact Us</a></li>
+            <li><a href="login.html" role="button" class="active">Log In</a></li>
+            <li><a href="SignUp.html" role="button" class="active">Register</a></li>
+            <li><a href="Assets/DonorU User Manual.docx" class="active" role="button" download="Getting Started with DonorU">Getting started</a></li>
+          </ul>
+        </section>
+        <section class="container">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex  justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong class="text-success">Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-md-5 ">
+                <!-- Email input -->
+               
+                  <input type="email" id="newsletter" class="form-control mb-2" placeholder="Email address" />
+                  <!-- <label class="form-label" for="newsletter">Email address</label> -->
+               
+              </div>
+              <!--Grid column-->
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-success mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      
+      
+       <section class="line d-flex justify-content-between">
+      <span class="pl-md-5">DonorU:© 2022 Copyright</span>
+      <div class="icons pr-md-5">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-youtube"></i>
+        <i class="bi bi-twitter"></i>
+      </div>
+       </section>
+      
+      
+      </footer>
+    <script>
+     // HAmburger Menu
+    function changeMenu(x) {
+        x.classList.toggle("change");
+    }
+    // XXXXX HaM MenuXXXXXX
+        window.onscroll = function(){
+            mySticky()
+            myDark()
+        };
+        var navbar = document.querySelector(".navbar");
+        var sticky = navbar.offsetTop;
+        function mySticky(){
+            if (window.pageYOffset>= sticky){
+                navbar.classList.add("sticky")
+            } else{
+                navbar.classList.remove("sticky")
+            }
+        }
+        var dark = navbar.offsetTop;
+        function myDark(){
+          if (window.pageYOffset>= dark){
+            navbar.classList.add("dark")
+          } else{
+              navbar.classList.remove("dark")
+            }
+        }
+    </script>
+</body>
+</html>

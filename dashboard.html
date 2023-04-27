@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Assets/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="Assets/bootstrap.css">
+
+    <link rel="stylesheet" href="./dashboard.css">
+
+    <script src="Assets/JQuerry.js"></script>
+    <script src="Assets/bootstrap-offline-js/bootstrap.js"></script>
+    <script src="Assets/owl.carousel.min.js"></script>
+   
+    <title>DonorU - Dashboard</title>
+</head>
+<body>
+    <div class="dashboard_wrapper">
+        <div class="dash_l" id="side_menu">
+            <div class="dash_logo">
+                <img src="./assets/images/logo_1.png" alt="DonorU">
+            </div>
+            <aside>
+                <ul>
+                    <li><i class="bi bi-speedometer"></i><a href="#">Dashboard</a></li>
+                    <li><i class="bi bi-activity"></i><a href="#">Activities</a></li>
+                    <li><i class="bi bi-chat-left-text"></i><a href="#">Message</a></li>
+                    <li><i class="bi bi-pen"></i><a href="#">Approve Campaigns</a></li>
+                    <li><i class="bi bi-patch-check"></i><a href="#">Rating</a></li>
+                    <li><i class="bi bi-arrow-bar-left"></i><a href="#">Checkout</a></li>
+                    <li><i class="bi bi-gear"></i><a href="#">Settings</a></li>
+                </ul>
+            </aside>
+            <div class="org_profile">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <span>Team DonorU</span>
+            </div>
+        </div>
+        <div class="dash_r">
+            <nav>
+                <div class="menu_toggle">
+                    <i class="bi bi-list" id="tog_menu"></i>
+                </div>
+                <div class="dash_profile">
+                    <i class="bi bi-person" id="user"></i>
+                    <h5 style="color:   #ffc107;">DonorU</h5>
+                </div>
+                <div class="profile_menu" id="profile_menu">
+                    <ul>
+                        <li><button><i class="bi bi-pencil"></i></button><a href="#">Edit profile</a></li>
+                        <hr>
+                        <li><button><i class="bi bi-gear"></i></button><a href="#">settings & privacy</a></li>
+                        <hr>
+                        <li><button><i class="bi bi-info-circle"></i></button><a href="#">Help & FAQs</a></li>
+                        <hr>
+                        <li><button><i class="bi bi-box-arrow-left"></i></button><a href="AdminLogIn.html">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h3 class="intro">Hello, DonorU</h3>
+            <section class="dash_wrapper">
+                <div class="dash_item">
+                    <i class="bi bi-calendar-event"></i>
+                    <h4>Due Campaigns</h4>
+                    <h1>10+</h1>
+                </div>
+                <div class="dash_item">
+                    <i class="bi bi-calendar-check"></i>
+                    <h4>Approved Campaigns</h4>
+                    <h1>5+</h1>
+                </div>
+                <div class="dash_item">
+                    <i class="bi bi-clock"></i>
+                    <h4>Pending Approval</h4>
+                    <h1>2+</h1>
+                </div>
+                <div class="dash_item">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <h4>Successful Campaigns</h4>
+                    <h1>15+</h1>
+                </div>
+                <div class="dash_item">
+                    <i class="bi bi-person-check"></i>
+                    <h4>Number of Users</h4>
+                    <h1>15+</h1>
+                </div>
+            </section>
+            <section class="dash_2">
+                <div class="dash_box">
+                    <i class="bi bi-person-fill-add"></i>
+                    <h4>Creator Tickets</h4>
+                    <h1>10+</h1>
+                </div>
+                <div class="dash_box">
+                    <i class="bi bi-person-hearts"></i>
+                    <h4>Donor Tickets</h4>
+                    <h1>30+</h1>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <script src="dash.js"></script>
+</body>
+</html>

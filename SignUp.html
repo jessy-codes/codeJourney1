@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="Assets/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="Assets/bootstrap.css">
+
+    <script src="Assets/JQuerry.js"></script>
+    <script src="Assets/bootstrap-offline-js/bootstrap.js"></script>
+</head>
+<body>
+
+    <div class="container1">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="glass">
+        <div class="form-container mx-3 my-5">
+            <form action="" method="post" class="needs-validation " novalidate>
+       <div class="row">
+           <div class="col-md-6">
+               <div class="form-group">
+                   <label for="fname">Full Name</label>
+                   <input type="text" class="form-control" id="fname" required autocomplete="name" placeholder="Firstname, Lastname">
+                   <div class="invalid-feedback">
+                       please enter full name
+                     </div>
+               </div>
+           </div>
+              <div class="col-md-6">
+               <div class="form-group">
+                 <label for="mail">Email address</label>
+                 <input type="email" class="form-control" id="mail" autocomplete="email" required placeholder="name@example.com">
+                 <div class="invalid-feedback">
+                   enter a valid email
+                 </div>
+               </div>
+              </div> 
+             <div class="col-md-6">
+               <div class="form-group">
+                   <label for="pword">Password</label>
+                   <input type="password" class="form-control" id="pword"  minlength="8" pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8}$" required placeholder="*******">
+                   <div class="invalid-feedback">
+                       Please provide a password of atleast 8 characters, an uppercase, number and a special character .
+                   </div>
+               </div>  
+              </div> 
+              <div class="col-md-6">
+                 <div class="form-group">
+                   <label for="cpword">Confirm Password</label>
+                   <input type="password" class="form-control" id="cpword" minlength="8" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8}$/g" required placeholder="********" onkeyup="validate_password()">
+                   <div id="wrong_pass_alert">
+                       
+                   </div>
+                 </div>
+               </div>
+           <div class="col-md-6">
+               <div class="form-group">
+                 <label for="countries">Countries</label>
+                 <select class="form-control " id="countries" required>
+                   
+                 </select>
+               </div> 
+           </div> 
+           <div class="col-md-6">
+               <div class="form-group">
+                 <label for="tel">telephone</label>
+                 <input type="tel" class="form-control" id="tel" required placeholder="+233 ### ####">
+                 <div class="invalid-feedback">
+                     wrong phone number alert.
+                 </div>
+               </div>
+             </div> 
+           <div class="form-group">
+               <div class="form-check">
+                 <input class="form-check-input" type="checkbox" value="agree" id="invalidCheck" required>
+                 <label class="form-check-label" for="invalidCheck">
+                   Agree to terms and conditions. <span class="font-size-12"><a href=""> Read terms & conditions</a></Span>
+                 </label>
+                 <div class="invalid-feedback">
+                   You must agree before submitting.
+                 </div>
+               </div>
+             </div>
+       </div>
+           <div class="text-center">
+           <button type="submit" class="btn btn-success mb-2 " id="create" onclick="wrong_pass_alert()"><i class="bi bi-check-lg"></i> Register</button>
+           </div>
+             </form>
+             <hr>
+             <div class="text-center">
+              <p class="text-white">already have an account?</p>
+              <a href="login.html">
+                <input type="button" value="Sign In" class="btn btn-outline-warning ">
+              </a>
+           </div>
+
+    </div>
+
+
+    <!-- Script tags -->
+  
+ <script src="app.js"></script>
+ <script src="countries.js"></script>
+ 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXScript tags XXXXXXXXXXXXXXXXXXXXXXXX-->
+</body>
+</html>

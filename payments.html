@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Assets/bootstrap-offline-css/bootstrap.css">
+    <script src="./Assets/bootstrap-4.0.0-dist/js/jquery-3.6.0.js"></script>
+    <script src="./Assets/bootstrap-offline-js/bootstrap.js"></script>
+    <title>payment</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+/* navbar */
+
+.ham{
+          width: 30px;
+          height: 4px;
+          background-color: #28a745;;
+          margin: 5px 0;
+          border-radius: 10px;
+          transition: .5s;
+
+      }
+      .ham2{
+          width: 23px !important;
+      }
+      .ham3{
+        width: 23px;
+        margin-left: 7px;
+      }
+      .hamContainer{
+          display: inline-block;
+          cursor: pointer;
+      }
+      
+      .change .ham1{
+          transform: translate(0,5px) rotate(-45deg);
+      }
+      .change .ham2{
+          opacity: 0;
+      }
+      .change .ham3{
+          transform:translate(0,-5px) rotate(45deg);
+          width: 25px;
+          margin-left: 0px;
+      }
+      #nbtn{
+        border:  #28a745 .2px solid;
+        outline: none;
+      }
+      #obtn:hover{
+        padding: 10px;
+      }
+      
+      .Socials ul li{
+      list-style: none;
+      float: left;
+      }
+      .Socials i{
+        color: #28a745;
+        font-size: 25px;
+        display: inline-block; 
+        border-radius: 100%;
+      
+      }
+    
+      .Socials> i:hover{
+        background-color: #28a745;
+        color: #fff;
+        transition: 2s;
+        height: 50px;
+        width: 50px;
+       
+      }
+      .innerSocials{
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row !important;
+      }
+      .innerSocials i{
+        padding: 0 5rem;
+        color:  #28a745;
+        font-size: 30px;
+      }
+
+      .navbar{
+        box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.68);
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.68);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.68);
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(256, 256, 256, 0.75);
+      }
+    
+/* XXXXXXXXXXXXXXXXXXX End of navbar XXXXXXXXXXXXXXXXXXXXXXXXXXXx*/
+/* Footer */
+section ul li{
+       float: left;
+       padding: 10px 10px;
+       
+     }
+     .mainLinks a{
+       text-decoration: none;
+       color: #ffc107;
+     }
+     .mainLinks a:hover{
+       color: #28a745;
+     }
+    
+     .mainLinks a:visited{
+       color: #28a745;
+     }
+     
+     .line{
+       border-top: 3px solid #6c757d;
+       width: 90%;
+       margin: auto;
+     }
+     .icons i{
+       display: inline-block;
+       width: 40px;
+       height: 40px;
+       border-radius: 100%;
+       border: #28a745 solid 2px;
+       color: #28a745;
+       font-size: 25px;
+     }
+     .icons i:hover{
+       background-color: #28a745;
+       color: #fff;
+     }
+   
+     footer input{
+       border: 1.5px solid #28a745 !important;
+     }
+     footer input:focus{
+       border: 2px solid #28a745 !important;
+       box-shadow: 0 2.5px 5px #28a745 !important;
+     }
+     footer{
+       box-shadow: 0px -15px 30 px -3px rgba(126, 118, 118, 0.68);
+       -webkit-box-shadow: 0px -15px 30px -3px rgba(0,0,0,0.33);
+       -moz-box-shadow: 0px -15px 30px -3px rgba(0,0,0,0.33);  
+       z-index: 10;
+     }
+     
+     
+/* XXXXXXXXXXXXXXXXXXX ENd of FooterXXXXXXXXXXXXXXXXXXXXXXX */
+
+      .img-fluid{
+        max-width: 100% !important;
+        height: auto;
+      }
+      .pcont{
+        top: 12vh;
+        position: relative;
+      }
+
+      @media (max-width: 380px){
+        .Socials,#obtn{
+          display: none !important;
+        }
+      }
+      @media (max-width: 576px){
+        .Socials, #obtn{
+          display: none !important;
+        }
+        .innerSocials i{
+        padding: 0 1rem;
+      }
+    }
+    </style>
+</head>
+<body>
+  
+  <nav class= "navbar navbar-light fixed-top justify-content-around p-lg-4">
+    <a class="navbar-brand" href="index.html#home"><h1 class="text-dark">Donor<span class="text-secondary">U</span></h1></a>
+    <div class="Socials">
+      <ul>
+        <li class="nav-item text-center">
+          <a class="nav-link " href="#">
+           
+              <i class="bi bi-twitter"></i>
+           
+          </a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link " href="#">
+            
+            <i class="bi bi-facebook"></i>
+         
+          </a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link " href="#">
+            
+            <i class="bi bi-instagram" ></i>
+         
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            
+            <i class="bi bi-youtube"></i>
+           
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="creatorform.html">
+      <button type="button" id="obtn" class="btn btn-success">Create Now <i class="bi bi-pencil-fill"></i></button>
+    </a>
+    <!-- Harmburger Menu -->
+    <button id="nbtn" class=" navbar-toggler " type="button" data-toggle="collapse" data-target="#myNavToggler" aria-controls="myNavToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="hamContainer" onclick="changeMenu(this)">
+          <div class="ham ham1"></div>
+          <div class="ham ham2"></div>
+          <div class="ham ham3"></div>
+        </div>
+    </button>
+   
+<!-- XXXXXXXXXXXXXXXX End of Harmburger MenuXXXXXXXXXXXXXXXXXX -->
+    <div class="collapse navbar-collapse" id="myNavToggler">
+      <!-- <div class="collapseFluid"> -->
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about"><i class=" bi bi-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="index.html#sec2"><i class="bi bi-box2-heart"></i> Donate Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="index.html"><i class="bi bi-telephone-inbound"></i> Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"><i class="bi bi-person-circle"></i> Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-youtube-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <ul class="navbar-nav innerSocials">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="bi bi-twitter" ></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </ul>
+      <!-- </div> -->
+      <div class="text-center mt-2">
+        <a href="creatorform.html">
+          <button type="button" id="obtn1" class="btn btn-lg btn-success ">Create Now <i class="bi bi-pencil-fill"></i></button>
+        </a>
+      </div>
+     
+  
+    </div>
+    
+  <!-- </div> -->
+</nav>
+<div class="container p-5 pcont">
+        <div class="row my-5">
+            <div class="col-md-6 ">
+              <img src="img/9.jpg" class="img-fluid rounded" alt="cause banner image">
+            </div>
+            <div class="col-md-6 ">
+                <form id="paymentForm" class="needs-validation " novalidate>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" required id="email-address" placeholder="you@example.com">
+                          <div class="invalid-feedback">
+                            Please enter a valid email address for shipping updates.
+                          </div>
+                        </div>
+                      </div>  
+                      <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" >
+                        <div class="invalid-feedback">
+                          Valid first name is required.
+                        </div>
+                    </div>
+                  </div>
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" >
+                        <div class="invalid-feedback">
+                          Valid last name is required.
+                        </div>
+                    </div>
+                  </div>
+                    <div class="col-md-12">
+                    <div class="form-group ">
+                      <label for="amount">Amount</label><br>
+              
+                      <div class="btn-group my-3">
+                        <input onclick="Mchange()" type="button" id="amount1" class="form-control mx-2" value="10" required />
+                        <input onclick="Mchange1()" type="button" id="amount2"class="form-control mx-2" value="25" required />
+                        <input onclick="Mchange2()" type="button" id="amount3" class="form-control mx-2" value="50" required />
+                     </div>
+                     <input type="text" id="amount" class="form-control required placeholder=" custom amount><br>
+                    </div>
+                  </div>
+                    <div class="form-submit text-center mx-auto">
+                      <button type="submit" class="btn btn-success px-5" onclick="payWithPaystack()"> Pay </button>
+                    </div>
+                </div>
+                </form>        
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-muted bg-light " id="myfoot">
+      <section class="d-flex justify-content-center">
+        <ul class="mainLinks">
+          <li><a href="index.html" role="button">Home</a></li>
+          <li><a href="index.html#about" role="button">About</a></li>
+          <li><a href="index.html#sec2" role="button">Causes</a></li>
+          <li><a href="#" role="button">Contact Us</a></li>
+          <li><a href="home.html" role="button">Log Out</a></li>
+          <li><a href="Assets/DonorU User Manual.docx" role="button" download="Getting Started with DonorU">Getting started</a></li>
+        </ul>
+      </section>
+      <section class="container">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex  justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong class="text-success">Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-5 ">
+              <!-- Email input -->
+             
+                <input type="email" id="newsletter" class="form-control mb-2" placeholder="Email address" />
+                <!-- <label class="form-label" for="newsletter">Email address</label> -->
+             
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-success mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    
+    
+     <section class="line d-flex justify-content-between">
+    <span class="pl-md-5">DonorU:© 2022 Copyright</span>
+    <div class="icons pr-md-5">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-youtube"></i>
+      <i class="bi bi-twitter"></i>
+    </div>
+     </section>
+    
+    
+    </footer>
+    <!-- script tags -->
+    
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
+     
+    <script>
+      // HAmburger Menu
+ function changeMenu(x) {
+     x.classList.toggle("change");
+ }
+ // XXXXX HaM MenuXXXXXX
+ // Add or remove content on window resize at breakpoint sm>=576px
+
+ // toggle nav bar content on click of menu button
+ $("#nbtn").click(function(){
+   $(".Socials, #obtn").toggle()
+ })
+ // XXXXXXXXXXXXXXXXXXXX End Of toggle nav bar content on click of menu button XXXXXXXXXXXXXXXXXXXxx
+//  Toggle navbar content on window resize
+$(document).ready(function(){
+ 
+ $(window).resize(function(){
+   if($(this).width() <= 576){
+     $(".Socials").hide();
+   }
+   else if(
+     $(this).width() > 576){
+       $(".Socials").show();
+     }
+ })
+})
+
+$(document).ready(function(){
+$(window).resize(function(){
+ if($(this).width() <=380){
+   $("#obtn").hide();
+ }
+ else (
+     $("#obtn").show());
+   
+})
+})
+// XXXXXXXXXXXXXXXXXXXXXXXXXX End of Toggle navbar content on window resize XXXXXXXXXXXXXXXXXXXXXXXXXX
+ </script>
+ <script src="app.js"></script>
+    <!-- XXXXXXXXXXXXXXXXXXXXEnd of Script TagsXXXXXXXXXXXXXXXXXXXXXXXXX -->
+  </body>
+</html>
